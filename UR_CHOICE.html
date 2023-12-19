@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Image Preference</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-color: #f0f0f0;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .image-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    img {
+      max-width: 300px;
+      height: auto;
+      margin: 0 10px;
+    }
+
+    .button-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 0 10px;
+      cursor: pointer;
+      border: none;
+      background-color: #3498db;
+      color: white;
+      border-radius: 5px;
+      outline: none;
+    }
+
+    button:hover {
+      background-color: #2980b9;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Which image do you prefer?</h1>
+    <div class="image-container">
+      <img id="image1" src="images/image1.jpg" alt="Image 1">
+      <img id="image2" src="images/image2.jpg" alt="Image 2">
+    </div>
+    <div class="button-container">
+      <button onclick="chooseImage('image1')">Image 1</button>
+      <button onclick="chooseImage('image2')">Image 2</button>
+    </div>
+    <div id="result"></div>
+  </div>
+
+  <script>
+    function chooseImage(image) {
+      document.getElementById('result').innerText = `You prefer ${image}!`;
+    }
+  </script>
+</body>
+</html>
